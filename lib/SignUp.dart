@@ -1,5 +1,5 @@
-import 'package:chat_page/chatpage.dart';
-import 'package:chat_page/colorCodes.dart';
+import 'package:chat_page/chatHomePage.dart';
+import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {

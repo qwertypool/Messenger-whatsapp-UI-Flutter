@@ -1,4 +1,4 @@
-import 'package:chat_page/colorCodes.dart';
+import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

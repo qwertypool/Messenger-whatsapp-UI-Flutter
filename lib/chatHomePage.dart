@@ -1,6 +1,6 @@
-import 'package:chat_page/chats/chatting.dart';
-import 'package:chat_page/colorCodes.dart';
-import 'package:chat_page/models/chat.dart';
+import 'package:chat_page/chats/chatScreen.dart';
+import 'package:chat_page/AppColorCodes.dart';
+import 'package:chat_page/models/chat_model.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
@@ -57,22 +57,40 @@ class _ChatPageState extends State<ChatPage> {
                     SizedBox(
                       width: 8,
                     ),
-                    MaterialButton(
-                      onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        side: BorderSide(color: Colors.white),
-                      ),
-                      elevation: 0,
-                      color: Colors.transparent,
-                      child: Text(
-                        "Message Requests",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                    Stack(
+                        children:[ MaterialButton(
+                        onPressed: () {},
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          side: BorderSide(color: Colors.white),
+                        ),
+                        elevation: 0,
+                        color: Colors.transparent,
+                        child: Text(
+                          "Requests",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                          ),
                         ),
                       ),
+                      Positioned(
+                          right: 0.1,
+                          top: 0.1,
+                          child: Container(
+                          width: 20,
+                          height: 20,
+                          decoration: BoxDecoration(color: Colors.white,
+                          shape: BoxShape.circle),
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children:[Text('9+',style: TextStyle(color:pPrimaryColor,fontSize: 10,fontWeight: FontWeight.w700),)
+                            ],
+                            ),
+                        ),
+                      )
+                        ],
                     ),
                   ],
                 ),

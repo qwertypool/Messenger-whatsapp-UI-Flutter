@@ -22,14 +22,14 @@ List chatMessages = [
     messageStatus: MessageStatus.viewed,
     isSender: false,
   ),
+  // ChatMessage(
+  //   text: "Hello, jyoti wht's up!?",
+  //   messageType: ChatMessageType.text,
+  //   messageStatus: MessageStatus.viewed,
+  //   isSender: true,
+  // ),
   ChatMessage(
-    text: "Hello, jyoti wht's up!?",
-    messageType: ChatMessageType.text,
-    messageStatus: MessageStatus.viewed,
-    isSender: true,
-  ),
-  ChatMessage(
-    text: "umm did you prepare the report??",
+    text: "Did you prepare the report??",
     messageType: ChatMessageType.text,
     messageStatus: MessageStatus.viewed,
     isSender: false,

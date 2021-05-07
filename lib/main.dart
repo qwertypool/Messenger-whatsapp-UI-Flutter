@@ -1,4 +1,4 @@
-import 'package:chat_page/theme.dart';
+import 'package:chat_page/lightDarkTheme.dart';
 import 'package:chat_page/welcomePage.dart';
 import 'package:flutter/material.dart';
 

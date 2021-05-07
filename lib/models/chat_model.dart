@@ -1,4 +1,4 @@
-import 'package:chat_page/models/user.dart';
+import 'package:chat_page/models/user_model.dart';
 
 class Chat {
   final String name, lastMessage, image, time;
