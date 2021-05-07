@@ -1,3 +1,4 @@
+import 'package:chat_page/chats/chatting.dart';
 import 'package:chat_page/colorCodes.dart';
 import 'package:chat_page/models/chat.dart';
 import 'package:flutter/material.dart';
@@ -8,16 +9,16 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    int _selectedIndex = 0;
     return Scaffold(
-      backgroundColor: pPrimaryColor,
+      // backgroundColor: pPrimaryColor,
       appBar: AppBar(
         //automaticallyImplyLeading: false,
         title: Text('Chats'),
         actions: [
-          Icon(Icons.search),
+          IconButton(icon:Icon(Icons.search),onPressed: (){},),
           Padding(
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),
             child: Container(
@@ -79,11 +80,11 @@ class _ChatPageState extends State<ChatPage> {
           Expanded(
             child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    //  color: Colors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    )),
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                )),
                 child: Column(
                   children: [
                     Padding(
@@ -94,7 +95,7 @@ class _ChatPageState extends State<ChatPage> {
                         children: [
                           Text('Favourite Contacts',
                               style: TextStyle(
-                                  color: Colors.grey[800],
+                                  // color: Colors.grey[800],
                                   fontWeight: FontWeight.w600)),
                           Icon(Icons.star)
                         ],
@@ -122,70 +123,96 @@ class _ChatPageState extends State<ChatPage> {
                                 Text(
                                   favorites[index].name,
                                   style: TextStyle(
-                                      color: Colors.grey[850],
+                                      // color: Colors.grey[850],
                                       fontWeight: FontWeight.w600,
                                       fontSize: 12.0),
                                 ),
                               ],
                             ),
                           );
-                          
                         },
                       ),
                     ),
-
                     Expanded(
-                       child: Container(
-                        child: ListView.builder(
-                            itemCount: chatsData.length,
-                            itemBuilder: (BuildContext context, int index) {
-                              return Padding(
-                                padding: EdgeInsets.symmetric(horizontal: pDefaultPadding,vertical: pDefaultPadding*0.75),
-                                child: Row(children: [
-                                  Stack(
-                                     children:[
-                                      CircleAvatar(
-                                      radius: 25,
-                                      backgroundImage:AssetImage(chatsData[index].image),
-                                    ),
-                                    if (chatsData[index].isActive)
-                                    Positioned(
-                                      right: 0,
-                                      bottom: 0,
-                                        child: Container(
-                                        width: 15,
-                                        height: 15,
-                                        decoration: BoxDecoration(
-                                          color: Colors.green,
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                            color: Theme.of(context).scaffoldBackgroundColor,
-                                            width: 3,
-                                          )
+                      child: Container(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Chatting()));
+                          },
+                          child: ListView.builder(
+                              itemCount: chatsData.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: pDefaultPadding,
+                                      vertical: pDefaultPadding * 0.75),
+                                  child: Row(
+                                    children: [
+                                      Stack(
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 25,
+                                            backgroundImage: AssetImage(
+                                                chatsData[index].image),
                                           ),
+                                          if (chatsData[index].isActive)
+                                            Positioned(
+                                              right: 0,
+                                              bottom: 0,
+                                              child: Container(
+                                                width: 15,
+                                                height: 15,
+                                                decoration: BoxDecoration(
+                                                    color: Colors.green,
+                                                    shape: BoxShape.circle,
+                                                    border: Border.all(
+                                                      color: Theme.of(context)
+                                                          .scaffoldBackgroundColor,
+                                                      width: 3,
+                                                    )),
+                                              ),
+                                            )
+                                        ],
                                       ),
-                                    )
+                                      Expanded(
+                                          child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: pDefaultPadding),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              chatsData[index].name,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            SizedBox(
+                                              height: 8,
+                                            ),
+                                            Opacity(
+                                                opacity: 0.7,
+                                                child: Text(
+                                                  chatsData[index].lastMessage,
+                                                  maxLines: 1,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                ))
+                                          ],
+                                        ),
+                                      )),
+                                      Opacity(
+                                          opacity: 0.7,
+                                          child: Text(chatsData[index].time))
                                     ],
                                   ),
-                                  Expanded(child: Padding(
-                                    padding: const EdgeInsets.symmetric(horizontal:pDefaultPadding),
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text(chatsData[index].name,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600),),
-                                        SizedBox(height: 8,),
-                                        Opacity(
-                                          opacity: 0.7,
-                                          child: Text(chatsData[index].lastMessage,maxLines: 1,overflow: TextOverflow.ellipsis,))
-                                      ],
-                                    ),
-                                  )),
-                                  Opacity(
-                                    opacity: 0.7,
-                                    child: Text(chatsData[index].time))
-                                ],),
-                              );
-                            }),
+                                );
+                              }),
+                        ),
                       ),
                     ),
                   ],
