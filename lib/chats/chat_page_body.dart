@@ -123,8 +123,8 @@ class Messages extends StatelessWidget {
                 style:  TextStyle(
                    // color: message.isSender ? Theme.of(context).textTheme.bodyText1!.color : Colors.black,
                    //color:  MediaQuery.of(context).platformBrightness == Brightness.dark?
-                   color: message.isSender? Theme.of(context).textTheme.bodyText1!.color : Colors.white
-                   //color:message.isSender?Colors.white:Colors.black
+                   color: message.isSender? Theme.of(context).textTheme.bodyText1!.color : Theme.of(context).textTheme.bodyText1!.color
+                   
                     ),
               )),
           if (message.isSender) MessageTick(status: message.messageStatus)

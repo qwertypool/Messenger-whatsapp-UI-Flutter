@@ -1,3 +1,4 @@
+import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,9 +16,10 @@ class _SigninState extends State<Signin> {
   Widget build(BuildContext context) {
       
     return Scaffold(
-        backgroundColor: Colors.teal,
+        //backgroundColor:Theme.of(context).textTheme.bodyText1!.color,
+        backgroundColor:pPrimaryColor,
         appBar: AppBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: pPrimaryColor,
           centerTitle: true,
           toolbarHeight: 140,
           title: Text(
@@ -113,7 +115,7 @@ class _SigninState extends State<Signin> {
                           child: Text(
                            'Forgot Password',
                             style: TextStyle(
-                              color: Colors.teal,
+                              color: pMedColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -126,8 +128,8 @@ class _SigninState extends State<Signin> {
                         borderRadius: BorderRadius.circular(29),
                         child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.teal,
-                                shadowColor: Colors.teal[100],
+                                primary: pMedColor.withOpacity(0.8),
+                                shadowColor: pPrimaryColor,
                                 padding: EdgeInsets.symmetric(
                               vertical: 15, horizontal: 25),
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(35.0))
@@ -146,7 +148,8 @@ class _SigninState extends State<Signin> {
                         children: <Widget>[
                           Text(
                             login ? "Don’t have an Account ? " : "Already have an Account ? ",
-                            style: TextStyle(color: Colors.black),
+                            // style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: Theme.of(context).textTheme.bodyText1!.color),
                           ),
                           GestureDetector(
                            onTap: (){
@@ -162,7 +165,7 @@ class _SigninState extends State<Signin> {
                             child: Text(
                               login ? "Sign Up" : "Sign In",
                               style: TextStyle(
-                                color: Colors.teal,
+                                color: pPrimaryColor,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -218,9 +221,9 @@ class TextFieldContainer extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-      width: size.width * 0.85,
+      width: size.width * 0.9,
       decoration: BoxDecoration(
-        color: Colors.teal[50],
+        color: pSecondaryColor.withOpacity(0.2),
         borderRadius: BorderRadius.circular(29),
       ),
       child: child,
@@ -247,12 +250,13 @@ class SocalIcon extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(
             width: 2,
-            color: Colors.teal,
+            color: pPrimaryColor,
           ),
           shape: BoxShape.circle,
         ),
         child: SvgPicture.asset(
           iconSrc,
+          color: Theme.of(context).textTheme.bodyText1!.color,
           height: 25,
           width: 25,
         ),
@@ -277,7 +281,7 @@ class OrDivider extends StatelessWidget {
             child: Text(
               "OR",
               style: TextStyle(
-                color: Colors.black,
+                color: Theme.of(context).textTheme.bodyText1!.color,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -291,7 +295,8 @@ class OrDivider extends StatelessWidget {
   Expanded buildDivider() {
     return Expanded(
       child: Divider(
-       color: Colors.grey,
+      //  color: Colors.grey,
+       color: Colors.grey[300],
         height: 1.5,
       ),
     );
