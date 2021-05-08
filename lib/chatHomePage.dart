@@ -13,7 +13,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: pPrimaryColor,
+   // backgroundColor: pPrimaryColor,
       appBar: AppBar(
         //automaticallyImplyLeading: false,
         title: Text('Chats'),

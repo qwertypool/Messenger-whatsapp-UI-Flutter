@@ -1,5 +1,6 @@
 import 'package:chat_page/chatHomePage.dart';
 import 'package:chat_page/AppColorCodes.dart';
+import 'package:chat_page/signUpPage/signUpNoAccount.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatelessWidget {
@@ -35,7 +36,7 @@ class SignUp extends StatelessWidget {
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
                 text: "Sign Up",
-                press: () {},
+                press: () =>Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin())),
               ),
               Spacer(flex: 2),
               // RawMaterialButton(

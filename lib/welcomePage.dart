@@ -1,9 +1,9 @@
-import 'package:chat_page/SignUp.dart';
 import 'package:chat_page/AppColorCodes.dart';
+import 'package:chat_page/signUpPage/SignUp.dart';
 import 'package:flutter/material.dart';
 // import 'package:chat_page/theme.dart';
 class WelcomePage extends StatelessWidget {
-  //const WelcomePage({Key key}) : super(key: key);
+const WelcomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,6 @@ class WelcomePage extends StatelessWidget {
         body: SafeArea(
     child: Column(
       children: [
-      //   ClipRRect(
-      //   borderRadius: BorderRadius.circular(50.0),
-      //   child: Image.asset('assets/chat_icon.jpg',width: 150,height: 150,),
-      // ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16.0,16.0,16.0,0.0),
           child: Container(
@@ -83,47 +79,7 @@ class WelcomePage extends StatelessWidget {
                     
                     shape: CircleBorder(),
                   ),
-      ),
-                
- 
-// FittedBox(
-//               child: TextButton(
-//                   onPressed: () => Navigator.push(
-//                         context,
-//                         MaterialPageRoute(
-//                           builder: (context) => SignUp(),
-//                         ),
-//                       ),
-//                   child: Row(
-//                     children: [
-//                       InkWell(
-//                         borderRadius: BorderRadius.circular(30),
-//                         focusColor: pPrimaryColor,
-//                         splashColor: pPrimaryColor,
-//                         child:Text(
-//                         "Next",
-//                         style: Theme.of(context).textTheme.bodyText1!.copyWith(
-//                               color: Theme.of(context)
-//                                   .textTheme
-//                                   .bodyText1!
-//                                   .color!
-//                                   .withOpacity(0.8),
-//                             ),
-//                       ),),
-//   SizedBox(width: pDefaultPadding / 3),
-//                       Icon(
-//                         Icons.arrow_forward_ios,
-//                         size: 16,
-//                         // color: Theme.of(context)
-//                         //     .textTheme
-//                         //     .bodyText1!
-//                         //     .color!
-//                         //     .withOpacity(0.8),
-//                       )
-//                     ],
-//                   )),
-//             )
-          
+      ),       
       ],
     ),
         ),
