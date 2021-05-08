@@ -50,4 +50,4 @@ ThemeData darkThemeData(BuildContext context) {
   );
 }
 
-final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
+final appBarTheme = AppBarTheme(color:pPrimaryColor, centerTitle: false, elevation: 0);

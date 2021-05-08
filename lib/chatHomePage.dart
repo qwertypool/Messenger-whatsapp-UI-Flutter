@@ -15,7 +15,7 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
    // backgroundColor: pPrimaryColor,
       appBar: AppBar(
-        //automaticallyImplyLeading: false,
+        backgroundColor:pPrimaryColor ,
         title: Text('Chats'),
         actions: [
           IconButton(icon:Icon(Icons.search),onPressed: (){},),
@@ -197,7 +197,7 @@ class _ChatPageState extends State<ChatPage> {
                                       ),
                                       Expanded(
                                           child: Padding(
-                                        padding: const EdgeInsets.symmetric(
+                                        padding: EdgeInsets.symmetric(
                                             horizontal: pDefaultPadding),
                                         child: Column(
                                           crossAxisAlignment:

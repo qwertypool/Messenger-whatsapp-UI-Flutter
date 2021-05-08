@@ -20,6 +20,7 @@ class _ChattingState extends State<Chatting> {
 
   AppBar buildAppBar() {
     return AppBar(
+      backgroundColor: pPrimaryColor,
       titleSpacing: 0,
       title: Row(
         children: [
