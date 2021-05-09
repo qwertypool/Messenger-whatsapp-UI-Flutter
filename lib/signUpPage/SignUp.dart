@@ -1,4 +1,4 @@
-import 'package:chat_page/chatHomePage.dart';
+import 'package:chat_page/ChatHomeScreen/chatHomePage.dart';
 import 'package:chat_page/AppColorCodes.dart';
 import 'package:chat_page/signUpPage/signUpNoAccount.dart';
 import 'package:flutter/material.dart';
@@ -16,19 +16,12 @@ class SignUp extends StatelessWidget {
             padding: const EdgeInsets.all(36.0),
             child: Column(
               children: [
-                // Image.asset(
-                //   MediaQuery.of(context).platformBrightness == Brightness.light
-                //       ? "assets/lightmode2.png"
-                //       : "assets/darkmode.png",
-                //   height: 256,
-                // ),
-                //Image.asset("assets/icons/facebook.svg",color: pPrimaryColor,height: 256),
                 SvgPicture.asset(
-                             "assets/icons/chat2.svg",
+                             "assets/icons/chat3.svg",
                            // color: Theme.of(context).textTheme.bodyText1!.color,
                             color: pPrimaryColor,
-                            height: 200,
-                            width: 200,
+                            height: 250,
+                            width: 250,
                           ),
                 
                  Spacer(),

@@ -63,9 +63,22 @@ final User steven = User(
   imageUrl: 'assets/images/steven.jpg',
   isActive: true,
 );
+final User aquib = User(
+  id: 8,
+  name: 'aquib',
+  imageUrl: 'assets/images/steven.jpg',
+  isActive: true,
+);
+final User ayush = User(
+  id: 9,
+  name: 'ayush',
+  imageUrl: 'assets/images/steven.jpg',
+  isActive: true,
+);
 
 // FAVORITE CONTACTS
 List<User> favorites = [dipa, dipak, suvam, joty, balram];
+List<User> active = [dipa, dipak, suvam, joty, balram,ayush,aquib,sophia,joty,dipa,balram,dipak,suvam,ayush,balram,ayush,dipak,dipa,joty,sophia,dipa,ayush,suvam,];
 List chatsData = [
   Chat(
     name: "Dipak Pandey",

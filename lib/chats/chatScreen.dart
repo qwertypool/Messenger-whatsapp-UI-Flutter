@@ -3,7 +3,7 @@ import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';
 
 class Chatting extends StatefulWidget {
-  //Chatting({Key key}) : super(key: key);
+  Chatting({Key? key}) : super(key: key);
 
   @override
   _ChattingState createState() => _ChattingState();
@@ -28,7 +28,7 @@ class _ChattingState extends State<Chatting> {
             children:[
             CircleAvatar(
             radius: 20,
-            backgroundImage: AssetImage('assets/me.jpg'),),
+            backgroundImage: AssetImage('assets/deepa.jpg'),),
             Positioned(
               right: 0,
               bottom: 0,

@@ -1,21 +1,20 @@
-import 'package:chat_page/chats/chatScreen.dart';
 import 'package:chat_page/AppColorCodes.dart';
-import 'package:chat_page/models/chat_model.dart';
 import 'package:flutter/material.dart';
+import 'package:chat_page/models/chat_model.dart';
+import 'package:chat_page/chats/chatScreen.dart';
 
-class ChatPage extends StatefulWidget {
-  @override
-  _ChatPageState createState() => _ChatPageState();
-}
 
-class _ChatPageState extends State<ChatPage> {
-  int _selectedIndex = 0;
+
+class Chats extends StatelessWidget {
+  const Chats({
+    Key? key,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-   // backgroundColor: pPrimaryColor,
-      appBar: AppBar(
-        backgroundColor:pPrimaryColor ,
+          appBar: AppBar(
+            backgroundColor:pPrimaryColor ,
         title: Text('Chats'),
         actions: [
           IconButton(icon:Icon(Icons.search),onPressed: (){},),
@@ -28,8 +27,8 @@ class _ChatPageState extends State<ChatPage> {
             ),
           )
         ],
-      ),
-      body: Column(
+            ),
+          body: Column(
         children: [
           Container(
               color: pPrimaryColor,
@@ -236,35 +235,6 @@ class _ChatPageState extends State<ChatPage> {
                   ],
                 )),
           ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: pPrimaryColor,
-        child: Icon(
-          Icons.person_add_alt_1_rounded,
-          color: Colors.white,
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
-        onTap: (value) {
-          setState(() {
-            _selectedIndex = value;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chats"),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
-          // BottomNavigationBarItem(
-          //   icon: CircleAvatar(
-          //     radius: 16,
-          //     backgroundImage: AssetImage("assets/chat_icon.jpg"),
-          //   ),
-          //   label: "Deepa",
-          // ),
         ],
       ),
     );
