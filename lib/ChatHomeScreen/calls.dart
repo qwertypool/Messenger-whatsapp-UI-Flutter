@@ -18,7 +18,7 @@ class Calls extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
-            horizontal: pDefaultPadding, vertical: pDefaultPadding),
+            horizontal: pDefaultPadding, vertical: pDefaultPadding*0.2),
         child: ListView.builder(
             itemCount: calls.length,
             itemBuilder: (BuildContext context, int index) {

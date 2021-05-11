@@ -1,6 +1,8 @@
 import 'package:chat_page/AppColorCodes.dart';
 import 'package:chat_page/models/messages_model.dart';
+// import 'package:emoji_picker/emoji_picker.dart';
 import 'package:flutter/material.dart';
+
 
 class Body extends StatelessWidget {
   //const Body({Key key}) : super(key: key);
@@ -53,7 +55,17 @@ class Body extends StatelessWidget {
                 children: [
                   IconButton(
                     icon: Icon(Icons.sentiment_satisfied_alt_outlined),
-                    onPressed: () {},
+                    onPressed: () {
+                      //  EmojiPicker(
+                      //         rows: 3,
+                      //         columns: 7,
+                      //         recommendKeywords: ["racing", "horse"],
+                      //         numRecommended: 10,
+                      //         onEmojiSelected: (emoji, category) {
+                      //           print(emoji);
+                      //         },
+                      //       );
+                    },
                   ),
                   SizedBox(
                     width: pDefaultPadding * 0.01,
@@ -121,8 +133,6 @@ class Messages extends StatelessWidget {
               child: Text(
                 message.text,
                 style:  TextStyle(
-                   // color: message.isSender ? Theme.of(context).textTheme.bodyText1!.color : Colors.black,
-                   //color:  MediaQuery.of(context).platformBrightness == Brightness.dark?
                    color: message.isSender? Theme.of(context).textTheme.bodyText1!.color : Theme.of(context).textTheme.bodyText1!.color
                    
                     ),

@@ -162,3 +162,61 @@ List chatsData = [
     isActive: false,
   ),
 ];
+List requestsData = [
+  Chat(
+    name: "Ravi Pandey",
+    lastMessage: "Hii good morning dear ☺️",
+    image: "assets/bro.jpg",
+    time: "3m ago",
+    isActive: true,
+  ),
+  Chat(
+    name: "Anand Singh",
+    lastMessage: "hlo girl😂😂😂",
+    image: "assets/bae.jpg",
+    time: "8m ago",
+    isActive: true,
+  ),
+  Chat(
+    name: "Suraj Sah",
+    lastMessage: "r u a cricket fan?then we can collab🤗🤗",
+    image: "assets/bro2.jpg",
+    time: "15m ago",
+    isActive: false,
+  ),
+  Chat(
+    name: "Mohan Mishra",
+    lastMessage: "ok dont talk 😡😭",
+    image: "assets/me.jpg",
+    time: "3h ago",
+    isActive: true,
+  ),
+  Chat(
+    name: "Raesh Kumar",
+    lastMessage: "hi plz reply u busy gal",
+    image: "assets/bro2.jpg",
+    time: "2d ago",
+    isActive: false,
+  ),
+  Chat(
+    name: "Balbhadra Singh",
+    lastMessage: "again hiiii...r u thr",
+    image: "assets/deepa.jpg",
+    time: "3d ago",
+    isActive: false,
+  ),
+  Chat(
+    name: "Priya Sharma",
+    lastMessage: "hlo wanna be frnds?🥰",
+    image: "assets/bae.jpg",
+    time: "4d ago",
+    isActive: true,
+  ),
+  Chat(
+    name: "Goutam Kamila",
+    lastMessage: "hlo girl😂😂😂 ",
+    image: "assets/bro.jpg",
+    time: "5d ago",
+    isActive: false,
+  ),
+];

@@ -1,7 +1,10 @@
 import 'package:chat_page/AppColorCodes.dart';
+import 'package:chat_page/ChatHomeScreen/profile.dart';
+import 'package:chat_page/ChatHomeScreen/requests.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_page/models/chat_model.dart';
 import 'package:chat_page/chats/chatScreen.dart';
+
 class Chats extends StatelessWidget {
   const Chats({
     Key? key,
@@ -10,22 +13,32 @@ class Chats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          appBar: AppBar(
-            backgroundColor:pPrimaryColor ,
+      appBar: AppBar(
+        backgroundColor: pPrimaryColor,
         title: Text('Chats'),
         actions: [
-          IconButton(icon:Icon(Icons.search),onPressed: (){},),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              showSearch(context: context, delegate: Datasearch());
+            },
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),
             child: Container(
               width: 40,
-              child:
-                  CircleAvatar(backgroundImage: AssetImage('assets/deepa.jpg')),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Profile()));
+                  },
+                  child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/deepa.jpg'))),
             ),
           )
         ],
-            ),
-          body: Column(
+      ),
+      body: Column(
         children: [
           Container(
               color: pPrimaryColor,
@@ -34,7 +47,10 @@ class Chats extends StatelessWidget {
                 child: Row(
                   children: [
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Chats()));
+                      },
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                         side: BorderSide(color: Colors.white),
@@ -54,39 +70,50 @@ class Chats extends StatelessWidget {
                       width: 8,
                     ),
                     Stack(
-                        children:[ MaterialButton(
-                        onPressed: () {},
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: BorderSide(color: Colors.white),
-                        ),
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: Text(
-                          "Requests",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
+                      children: [
+                        MaterialButton(
+                          onPressed: () {
+                             Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Requests()));
+                          },
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            side: BorderSide(color: Colors.white),
+                          ),
+                          elevation: 0,
+                          color: Colors.transparent,
+                          child: Text(
+                            "Requests",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
                           ),
                         ),
-                      ),
-                      Positioned(
+                        Positioned(
                           right: 0.1,
                           top: 0.1,
                           child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(color: Colors.white,
-                          shape: BoxShape.circle),
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children:[Text('9+',style: TextStyle(color:pPrimaryColor,fontSize: 10,fontWeight: FontWeight.w700),)
-                            ],
+                            width: 20,
+                            height: 20,
+                            decoration: BoxDecoration(
+                                color: Colors.white, shape: BoxShape.circle),
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Text(
+                                  '9+',
+                                  style: TextStyle(
+                                      color: pPrimaryColor,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w700),
+                                )
+                              ],
                             ),
-                        ),
-                      )
-                        ],
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
@@ -234,6 +261,81 @@ class Chats extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class Datasearch extends SearchDelegate<String> {
+  final names = [
+    'deepa',
+    'deepak',
+    'suvam',
+    'balram',
+    'suvam pandey',
+    'deepa pandey',
+    'ayush mishra',
+    'dipa',
+    'steen',
+    'steen locas',
+    'balram rathore',
+    'ritu',
+    'riya',
+  ];
+  final recentSearches = [
+    'deepak',
+    'joty',
+    'suvam',
+    'ayush',
+    'riya',
+  ];
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: Icon(Icons.mic),
+        onPressed: () {},
+      )
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      icon: AnimatedIcon(
+        icon: AnimatedIcons.menu_arrow,
+        progress: transitionAnimation,
+      ),
+      onPressed: () {
+        close(context, '');
+      },
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final suggestionList = query.isEmpty
+        ? recentSearches
+        : names.where((element) => element.startsWith(query)).toList();
+    return ListView.builder(
+      itemBuilder: (context, index) => ListTile(
+        leading: Icon(Icons.person_search),
+        title: RichText(
+            text: TextSpan(
+                text: suggestionList[index].substring(0, query.length),
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                children: [
+              TextSpan(
+                  text: suggestionList[index].substring(query.length),
+                  style: TextStyle(color: Colors.grey))
+            ])),
+      ),
+      itemCount: suggestionList.length,
     );
   }
 }

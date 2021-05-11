@@ -1,5 +1,5 @@
 import 'package:chat_page/ChatHomeScreen/calls.dart';
-import 'package:chat_page/ChatHomeScreen/chats.dart';
+import 'package:chat_page/ChatHomeScreen/recent_chats.dart';
 import 'package:chat_page/ChatHomeScreen/people.dart';
 import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';

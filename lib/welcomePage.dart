@@ -22,21 +22,6 @@ const WelcomePage({Key? key}) : super(key: key);
                               width: 220,
                             ),
                 ),
-        // Padding(
-        //   padding: const EdgeInsets.fromLTRB(16.0,16.0,16.0,0.0),
-        //   child: Container(
-
-        //           width: MediaQuery.of(context).size.width,
-        //           height: MediaQuery.of(context).size.height*0.5,
-        //           decoration: new BoxDecoration(
-        //               shape: BoxShape.circle,
-        //               image: new DecorationImage(
-        //                   fit: BoxFit.fill,
-        //                   image: AssetImage(
-        //                       "assets/letstalk.jpg")
-        //               )
-        //               )),
-        // ),
         Spacer(),
       Text('Ping Up & Ring Up',
       textAlign: TextAlign.center,
@@ -60,16 +45,6 @@ const WelcomePage({Key? key}) : super(key: key);
       ),
       ),
       SizedBox(height: 30,),
-      // Padding(
-      //   padding: const EdgeInsets.symmetric(horizontal:16),
-      //   child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
-      //   textAlign: TextAlign.center,
-      //   style: TextStyle(color: Colors.grey,
-      //   fontSize: 15.0,
-      //   fontWeight: FontWeight.w400,
-      //   ),),
-      // ),
-     // Spacer(flex: 4),
       ColorChange(),
       Spacer(flex: 2,),
       Padding(
@@ -87,7 +62,7 @@ const WelcomePage({Key? key}) : super(key: key);
                     child: Icon(
                       Icons.arrow_forward,
                       size: 35.0,
-                       color: Colors.grey,
+                       color: Colors.pink[600],
                      // color: Theme.of(context).textTheme.bodyText1!.backgroundColor,
                     ),
                     padding: EdgeInsets.all(15.0),
