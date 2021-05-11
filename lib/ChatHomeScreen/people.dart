@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:chat_page/models/chat_model.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +12,7 @@ class People extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: pPrimaryColor,
         toolbarHeight: 70,
         leading: Padding(
           padding: const EdgeInsets.only(left: 4.0, right: 4.0),
@@ -97,8 +100,10 @@ class People extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             radius: 25,
-                            backgroundImage: AssetImage(
-                                'assets/me.jpg'),
+                            backgroundColor: generateRandomColor(),
+                            child: Text(active[index].name[0],style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+                            // backgroundImage: AssetImage(
+                            //     'assets/me.jpg'),
                           ),
                             Positioned(
                               right: 0,
@@ -137,5 +142,10 @@ class People extends StatelessWidget {
         ),
       ),
     );
+  }
+  Color generateRandomColor() {
+    Random random = Random();
+    return Color.fromARGB(
+        255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
   }
 }

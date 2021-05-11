@@ -2,9 +2,6 @@ import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_page/models/chat_model.dart';
 import 'package:chat_page/chats/chatScreen.dart';
-
-
-
 class Chats extends StatelessWidget {
   const Chats({
     Key? key,

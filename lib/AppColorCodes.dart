@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-// const Color pPrimaryColor = Color(0xFFba2d65);
-// const Color pMedColor = Color(0xFFf06292);
-// const Color pSecondaryColor = Color(0xFFff94c2);
-// const Color pContentColorLightTheme = Color(0xFF1D1D35);
-// const Color pContentColorDarkTheme = Color(0xFFF5FCF9);
-// const Color pWarninngColor = Color(0xFFF3BB1C);
-// const Color pErrorColor = Color(0xFFF03738);
-// const pDefaultPadding = 20.0;
-
 Color pPrimaryColor = Color(0xFFba2d65);
 Color pMedColor = Color(0xFFf06292);
 Color pSecondaryColor = Color(0xFFff94c2);
