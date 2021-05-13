@@ -26,60 +26,68 @@ final User dipa = User(
     name: 'Dipa',
     imageUrl: 'assets/deepa.jpg',
     isActive: true,
+    isVideoCall : false,
     time: '(3) Today 12:06 PM');
 final User dipak = User(
     id: 2,
     name: 'Dipak',
     imageUrl: 'assets/bro.jpg',
     isActive: true,
+    isVideoCall : false,
     time: '(3) Today 12:06 PM');
 final User suvam = User(
     id: 3,
     name: 'Suvam',
     imageUrl: 'assets/bro2.jpg',
-    isActive: false,
+    isActive: true,
+    isVideoCall : false,
     time: '(3) May 7, 5:26 PM');
 final User joty = User(
     id: 4,
     name: 'Joty',
     imageUrl: 'assets/me.jpg',
     isActive: false,
+    isVideoCall : true,
     time: ' Yesterday, 5:24 PM');
 final User balram = User(
     id: 5,
     name: 'Balram',
     imageUrl: 'assets/bae.jpg',
     isActive: true,
+    isVideoCall : false,
     time: '(2) Yesterday, 8:16 PM');
 final User sophia = User(
     id: 6,
     name: 'Sophia',
     imageUrl: 'assets/images/sophia.jpg',
     isActive: true,
+    isVideoCall : true,
     time: 'May 3 9:21 AM');
 final User steven = User(
     id: 7,
     name: 'Steven',
     imageUrl: 'assets/images/steven.jpg',
-    isActive: true,
+    isActive: false,
+    isVideoCall : true,
     time: '(2) May 8 3:06 PM');
 final User tuktuk = User(
     id: 8,
     name: 'Tuktuk ',
     imageUrl: 'assets/images/steven.jpg',
     isActive: true,
+    isVideoCall : false,
     time: 'May 8, 11:16 AM');
 final User ayush = User(
     id: 9,
     name: 'Ayush ',
     imageUrl: 'assets/images/steven.jpg',
-    isActive: true,
-    time: 'May 6, 7:10 PM'
-    );
+    isActive: false,
+    isVideoCall : false,
+    time: 'May 6, 7:10 PM');
 
 // FAVORITE CONTACTS
 List<User> favorites = [dipa, dipak, suvam, joty, balram];
-List<User> calls = [dipak, joty, balram, tuktuk, steven, suvam, ayush, sophia];
+List<User> calls = [dipak, joty, balram, tuktuk, steven, suvam, ayush, sophia,dipak, joty, balram, tuktuk, steven, suvam, ayush, sophia];
 List<User> active = [
   dipa,
   dipak,

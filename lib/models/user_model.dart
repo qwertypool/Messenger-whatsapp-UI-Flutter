@@ -3,6 +3,7 @@ class User {
   final String name;
   final String imageUrl;
   final bool isActive;
+  final bool isVideoCall;
   final String time;
 
   User({
@@ -10,6 +11,7 @@ class User {
     this.name = '',
     this.imageUrl = '',
     this.isActive = false,
+    this.isVideoCall = false,
     this.time = '',
   });
 }

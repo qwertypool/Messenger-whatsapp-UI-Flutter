@@ -35,7 +35,7 @@ class Calls extends StatelessWidget {
                               radius: 25,
                               backgroundColor: generateRandomColor(),
                               child: Text(
-                                active[index].name[0],
+                                calls[index].name[0],
                                 style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
@@ -77,7 +77,7 @@ class Calls extends StatelessWidget {
                                 ),
                                 Row(
                                   children: [
-                                    (calls[index].isActive)?Icon(Icons.call_missed_outgoing,color: Colors.red, ):Icon(Icons.call_received_outlined,color: Colors.green,),
+                                    (calls[index].isActive==false)?Icon(Icons.call_missed_outgoing,color: Colors.red, ):Icon(Icons.call_received_outlined,color: Colors.green,),
                                     SizedBox(width: 5,),
                                     Opacity(
                                         opacity: 0.7,
@@ -91,10 +91,16 @@ class Calls extends StatelessWidget {
                             ),
                           ),
                         ),
+                        (calls[index].isVideoCall)?
+                        Icon(
+                          Icons.video_call_rounded,
+                          color: Colors.green,
+                          size: 28,
+                        ):
                         Icon(
                           Icons.phone,
                           color: Colors.green,
-                        ),
+                        )
                       ],
                     ),
                     Divider(
@@ -108,6 +114,28 @@ class Calls extends StatelessWidget {
               );
               
             }),
+      ),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: pPrimaryColor,
+            child: Icon(
+              Icons.video_call,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(height: 8,),
+          FloatingActionButton(
+              onPressed: () {},
+              backgroundColor: pPrimaryColor,
+              child: Icon(
+                Icons.phone_forwarded,
+                color: Colors.white,
+              ),
+            ),
+        ],
       ),
     );
   }

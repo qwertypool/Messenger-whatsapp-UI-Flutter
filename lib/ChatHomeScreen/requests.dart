@@ -93,7 +93,7 @@ class Requests extends StatelessWidget {
                                           CircleAvatar(
                                             radius: 25,
                                              backgroundColor: generateRandomColor(),
-                            child: Text(active[index].name[0],style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+                            child: Text(requestsData[index].name[0],style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
                                           ),
                                           if (requestsData[index].isActive)
                                             Positioned(

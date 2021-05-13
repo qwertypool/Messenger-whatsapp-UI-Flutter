@@ -1,8 +1,13 @@
 import 'package:chat_page/AppColorCodes.dart';
 import 'package:flutter/material.dart';
+// import 'package:camera/camera.dart';
+// import 'package:path/path.dart';
+// import 'package:path_provider/path_provider.dart';
+
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +59,7 @@ class Profile extends StatelessWidget {
                   leading: Icon(Icons.info_outline_rounded,color: pPrimaryColor,),
                   title: Text('About'),
                   subtitle: Text(
-                      'habituated🤕wid coding👨‍💻 & covid🦠 '
+                      'Accustomed 🤕 wid coding 👨‍💻 & covid 🦠 '
                   ),
                   trailing: Icon(Icons.edit),
                   isThreeLine: true,

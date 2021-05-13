@@ -1,8 +1,22 @@
 import 'package:chat_page/lightDarkTheme.dart';
 import 'package:chat_page/welcomePage.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+// import 'package:chat_page/ChatHomeScreen/profile.dart';
+// import 'dart:io';
+//import 'package:camera/camera.dart';
 
-void main() {
+Future<void> main() async {
+  // Ensure that plugin services are initialized so that `availableCameras()`
+  // can be called before `runApp()`
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Obtain a list of the available cameras on the device.
+  //final  cameras = await availableCameras();
+
+  // Get a specific camera from the list of available cameras.
+  //final firstCamera = cameras.first;
+
   runApp(MyApp());
 }
 
@@ -13,10 +27,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chat Page UI',
       debugShowCheckedModeBanner: false,
-       theme: lightThemeData(context),
+      theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
       home: WelcomePage(),
     );
   }
 }
-

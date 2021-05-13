@@ -261,6 +261,14 @@ class Chats extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: pPrimaryColor,
+        child: Icon(
+          Icons.person_add_alt_1_rounded,
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }
