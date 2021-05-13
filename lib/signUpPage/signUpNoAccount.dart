@@ -14,7 +14,6 @@ class _SigninState extends State<Signin> {
   bool login = false;
   @override
   Widget build(BuildContext context) {
-      
     return Scaffold(
         //backgroundColor:Theme.of(context).textTheme.bodyText1!.color,
         backgroundColor:pPrimaryColor,
@@ -22,15 +21,7 @@ class _SigninState extends State<Signin> {
           backgroundColor: pPrimaryColor,
           centerTitle: true,
           toolbarHeight: 140,
-          title: Text(
-            '...',
-            style: TextStyle(
-                //fontWeight: FontWeight.bold,
-                fontSize: 50,
-                fontFamily: 'Girassol',
-                letterSpacing: 3.0),
-          ),
-          elevation: 0.0,
+          title: Text('...',),
         ),
         body: SingleChildScrollView(
           child: Stack(
@@ -296,7 +287,7 @@ class OrDivider extends StatelessWidget {
     return Expanded(
       child: Divider(
       //  color: Colors.grey,
-       color: Colors.grey[300],
+       color: Colors.grey[400],
         height: 1.5,
       ),
     );

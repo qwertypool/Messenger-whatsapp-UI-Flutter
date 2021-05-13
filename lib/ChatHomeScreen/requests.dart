@@ -11,9 +11,12 @@ class Requests extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+      final Brightness brightnessValue = MediaQuery.of(context).platformBrightness;
+      bool isDark = brightnessValue == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
         title: Text('Message Requests'),
+        backgroundColor: pPrimaryColor,
         actions: [],),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: pDefaultPadding*0.5,vertical: pDefaultPadding),
@@ -27,9 +30,12 @@ class Requests extends StatelessWidget {
                       onPressed: () {},
                       minWidth: MediaQuery.of(context).size.width * 0.4,
                       height: 45,
-                      shape: RoundedRectangleBorder(
+                      shape:isDark? RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                         side: BorderSide(color: Colors.white),
+                      ):RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        side: BorderSide(color: Colors.black,),
                       ),
                       elevation: 0,
                       color: pPrimaryColor.withOpacity(0.8),
@@ -51,11 +57,14 @@ class Requests extends StatelessWidget {
                       onPressed: () {},
                       height: 45,
                       minWidth: MediaQuery.of(context).size.width * 0.4,
-                      shape: RoundedRectangleBorder(
+                      shape: isDark? RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                         side: BorderSide(color: Colors.white),
+                      ):RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        side: BorderSide(color: Colors.black),
                       ),
-                      elevation: 0,
+                      elevation: 3,
                       color: pSecondaryColor.withOpacity(0.9),
                       child: Text(
                         "Spam",

@@ -8,6 +8,8 @@ class People extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     final Brightness brightnessValue = MediaQuery.of(context).platformBrightness;
+      bool isDark = brightnessValue == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: pPrimaryColor,
@@ -43,10 +45,13 @@ class People extends StatelessWidget {
                   onPressed: () {},
                   minWidth: MediaQuery.of(context).size.width * 0.4,
                   height: 45,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    side: BorderSide(color: Colors.white),
-                  ),
+                  shape: isDark? RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        side: BorderSide(color: Colors.white),
+                      ):RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        side: BorderSide(color: Colors.black,),
+                      ),
                   elevation: 0,
                   color: pPrimaryColor.withOpacity(0.8),
                   //color: Colors.grey[500],
@@ -67,10 +72,13 @@ class People extends StatelessWidget {
                   onPressed: () {},
                   height: 45,
                   minWidth: MediaQuery.of(context).size.width * 0.4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    side: BorderSide(color: Colors.white),
-                  ),
+                  shape: isDark? RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        side: BorderSide(color: Colors.white),
+                      ):RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        side: BorderSide(color: Colors.black,),
+                      ),
                   elevation: 0,
                   color: pSecondaryColor.withOpacity(0.9),
                   child: Text(

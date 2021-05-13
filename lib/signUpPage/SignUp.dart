@@ -16,12 +16,13 @@ class SignUp extends StatelessWidget {
             padding: const EdgeInsets.all(36.0),
             child: Column(
               children: [
+                Spacer(),
                 SvgPicture.asset(
-                             "assets/icons/chat3.svg",
+                             "assets/icons/chat-bubble.svg",
                            // color: Theme.of(context).textTheme.bodyText1!.color,
                             color: pPrimaryColor,
-                            height: 250,
-                            width: 250,
+                            height: 220,
+                           // width: 220,
                           ),
                 
                  Spacer(),
