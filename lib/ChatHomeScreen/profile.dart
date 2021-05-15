@@ -37,12 +37,17 @@ class Profile extends StatelessWidget {
           child: ListView(
             children: <Widget>[
               Card(
+                color: Colors.transparent,
                 elevation: 0,
                 child: ListTile(
                   leading: Icon(Icons.person,color: pPrimaryColor,),
                   title: Text('Name'),
-                  subtitle: Text(
-                      'Deepa Pandey '
+                  subtitle: Opacity(
+                    opacity: 0.7,
+                    child: Text(
+                        'Deepa Pandey ',
+                        style: TextStyle(color:Theme.of(context).textTheme.bodyText1!.color),
+                    ),
                   ),
                   trailing: Icon(Icons.edit),
                 ),
@@ -54,12 +59,17 @@ class Profile extends StatelessWidget {
                       endIndent: 5,
                     ),
               Card(
+                color: Colors.transparent,
                 elevation: 0,
                 child: ListTile(
                   leading: Icon(Icons.info_outline_rounded,color: pPrimaryColor,),
                   title: Text('About'),
-                  subtitle: Text(
-                      'Accustomed 🤕 wid coding 👨‍💻 & covid 🦠 '
+                  subtitle: Opacity(
+                    opacity: 0.7,
+                    child: Text(
+                        'Accustomed 🤕 wid coding 👨‍💻 & covid 🦠 ',
+                        style: TextStyle(color:Theme.of(context).textTheme.bodyText1!.color),
+                    ),
                   ),
                   trailing: Icon(Icons.edit),
                   isThreeLine: true,
@@ -72,12 +82,17 @@ class Profile extends StatelessWidget {
                       endIndent: 5,
                     ),
               Card(
+                color: Colors.transparent,
                 elevation: 0,
                 child: ListTile(
                   leading: Icon(Icons.phone,color: pPrimaryColor,),
                   title: Text('Phone'),
-                  subtitle: Text(
-                      '+91 12345 67890 '
+                  subtitle: Opacity(
+                    opacity: 0.7,
+                      child: Text(
+                        '+91 12345 67890 ',
+                        style: TextStyle(color:Theme.of(context).textTheme.bodyText1!.color),
+                    ),
                   ),
                   trailing: Icon(Icons.edit),
                   //isThreeLine: true,

@@ -173,34 +173,37 @@ class _ColorChangeState extends State<ColorChange> {
               ],
             ),
             Spacer(),
-            RawMaterialButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SignUp(),
+            Padding(
+              padding: const EdgeInsets.only(bottom:10.0),
+              child: RawMaterialButton(
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignUp(),
+                  ),
                 ),
+                elevation: 5.0,
+                constraints: BoxConstraints(
+                    minWidth: MediaQuery.of(context).size.width * 0.95,
+                    minHeight: 42.0),
+                fillColor: Theme.of(context).textTheme.bodyText1!.color,
+                child: Text(
+                  'Continue',
+                  style: isDark == true
+                      ? TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          letterSpacing: 4,
+                          fontWeight: FontWeight.w600)
+                      : TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          letterSpacing: 4,
+                          fontWeight: FontWeight.w500),
+                ),
+                padding: EdgeInsets.all(10.0),
+                shape: RoundedRectangleBorder(),
               ),
-              elevation: 5.0,
-              constraints: BoxConstraints(
-                  minWidth: MediaQuery.of(context).size.width * 0.95,
-                  minHeight: 42.0),
-              fillColor: Theme.of(context).textTheme.bodyText1!.color,
-              child: Text(
-                'Continue',
-                style: isDark == true
-                    ? TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        letterSpacing: 4,
-                        fontWeight: FontWeight.w600)
-                    : TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        letterSpacing: 4,
-                        fontWeight: FontWeight.w500),
-              ),
-              padding: EdgeInsets.all(10.0),
-              shape: RoundedRectangleBorder(),
             ),
           ],
         )),

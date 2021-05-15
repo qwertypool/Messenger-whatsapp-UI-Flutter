@@ -1,9 +1,7 @@
 import 'dart:math';
-
 import 'package:chat_page/chats/chatScreen.dart';
 import 'package:chat_page/models/chat_model.dart';
 import 'package:flutter/material.dart';
-
 import '../AppColorCodes.dart';
 
 class Requests extends StatelessWidget {

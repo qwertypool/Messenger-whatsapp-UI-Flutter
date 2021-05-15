@@ -1,8 +1,6 @@
 
 import 'package:chat_page/AppColorCodes.dart';
-// import 'package:chat_page/signUpPage/SignUp.dart';
 import 'package:flutter/material.dart';
-// import 'package:chat_page/theme.dart';
 class WelcomePage extends StatelessWidget {
 const WelcomePage({Key? key}) : super(key: key);
 
@@ -15,12 +13,7 @@ const WelcomePage({Key? key}) : super(key: key);
     child: Column(
       children: [
         Spacer(),
-                // SvgPicture.asset(
-                //              "assets/icons/group.svg",
-                //             height: 220,
-                //             width: 220,
-                //           ),
-                          Image.asset('assets/mobile-chatting-app.png'),
+       Image.asset('assets/mobile-chatting-app.png'),
        SizedBox(height: 5,),
       Text('Ping Up & Ring Up',
       textAlign: TextAlign.center,

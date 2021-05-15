@@ -23,16 +23,18 @@ final User currentUser = User(
 // USERS
 final User dipa = User(
     id: 1,
-    name: 'Dipa',
+    name: 'Deepa',
     imageUrl: 'assets/deepa.jpg',
     isActive: true,
+    storyImage:'assets/woman.png',
     isVideoCall : false,
     time: '(3) Today 12:06 PM');
 final User dipak = User(
     id: 2,
-    name: 'Dipak',
+    name: 'Deepak',
     imageUrl: 'assets/bro.jpg',
     isActive: true,
+    storyImage:'assets/man-with-glass.png',
     isVideoCall : false,
     time: '(3) Today 12:06 PM');
 final User suvam = User(
@@ -40,13 +42,15 @@ final User suvam = User(
     name: 'Suvam',
     imageUrl: 'assets/bro2.jpg',
     isActive: true,
+    storyImage:'assets/happy-man.png',
     isVideoCall : false,
     time: '(3) May 7, 5:26 PM');
 final User joty = User(
     id: 4,
     name: 'Joty',
-    imageUrl: 'assets/me.jpg',
+    imageUrl: 'assets/laughing-girl.png',
     isActive: false,
+    storyImage:'assets/laughing-girl.png',
     isVideoCall : true,
     time: ' Yesterday, 5:24 PM');
 final User balram = User(
@@ -54,6 +58,7 @@ final User balram = User(
     name: 'Balram',
     imageUrl: 'assets/bae.jpg',
     isActive: true,
+    storyImage:'assets/man-with-glass.png',
     isVideoCall : false,
     time: '(2) Yesterday, 8:16 PM');
 final User sophia = User(
@@ -61,6 +66,7 @@ final User sophia = User(
     name: 'Sophia',
     imageUrl: 'assets/images/sophia.jpg',
     isActive: true,
+    storyImage:'assets/happy-man.png',
     isVideoCall : true,
     time: 'May 3 9:21 AM');
 final User steven = User(
@@ -68,6 +74,7 @@ final User steven = User(
     name: 'Steven',
     imageUrl: 'assets/images/steven.jpg',
     isActive: false,
+    storyImage:'assets/man-with-glass.png',
     isVideoCall : true,
     time: '(2) May 8 3:06 PM');
 final User tuktuk = User(
@@ -76,11 +83,13 @@ final User tuktuk = User(
     imageUrl: 'assets/images/steven.jpg',
     isActive: true,
     isVideoCall : false,
+    storyImage:'assets/happy-man.png',
     time: 'May 8, 11:16 AM');
 final User ayush = User(
     id: 9,
     name: 'Ayush ',
     imageUrl: 'assets/images/steven.jpg',
+    storyImage:'assets/woman.png',
     isActive: false,
     isVideoCall : false,
     time: 'May 6, 7:10 PM');
@@ -137,7 +146,7 @@ List chatsData = [
   Chat(
     name: "Priyanka Basak",
     lastMessage: "Will you be attending the meet today?? :)",
-    image: "assets/me.jpg",
+    image: "assets/woman.png",
     time: "3h ago",
     isActive: true,
   ),

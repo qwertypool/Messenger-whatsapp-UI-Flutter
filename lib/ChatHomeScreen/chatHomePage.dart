@@ -1,3 +1,4 @@
+import 'package:chat_page/AppColorCodes.dart';
 import 'package:chat_page/ChatHomeScreen/calls.dart';
 import 'package:chat_page/ChatHomeScreen/recent_chats.dart';
 import 'package:chat_page/ChatHomeScreen/people.dart';
@@ -19,6 +20,7 @@ class _ChatPageState extends State<ChatPage> {
       
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        selectedIconTheme: IconThemeData(color: pPrimaryColor),
         currentIndex: _selectedIndex,
         onTap: (value) {
           setState(() {
@@ -26,9 +28,9 @@ class _ChatPageState extends State<ChatPage> {
           });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chats"),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
+          BottomNavigationBarItem(icon: Icon(Icons.messenger,), label: "Chats"),
+          BottomNavigationBarItem(icon: Icon(Icons.people,), label: "People"),
+          BottomNavigationBarItem(icon: Icon(Icons.call,), label: "Calls"),
         ],
       ),
     );

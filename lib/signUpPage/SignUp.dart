@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SignUp extends StatelessWidget {
-  //const SignUp({Key key}) : super(key: key);
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,18 +41,9 @@ class SignUp extends StatelessWidget {
                 ),
                   child: Text(
                     "Sign In",
-                    style: TextStyle(color: Colors.white,fontFamily: 'Sacramento',fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 3.0),
+                    style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500,letterSpacing: 3.0),
                   ),
                 ),
-              // PrimaryButton(
-              //   text: "Sign In",
-              //   press: () => Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //       builder: (context) => Signin(),
-              //     ),
-              //   ),
-              // ),
               SizedBox(height: pDefaultPadding * 1.5),
               MaterialButton(
                   shape: RoundedRectangleBorder(
@@ -69,29 +60,10 @@ class SignUp extends StatelessWidget {
                 ),
                   child: Text(
                     "Sign Up",
-                    style: TextStyle(color: Colors.white,fontFamily: 'Sacramento',fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 3.0),
+                    style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w500,letterSpacing: 3.0),
                   ),
                 ),
-              // PrimaryButton(
-              //  // color: Theme.of(context).colorScheme.secondary,
-              //   text: "Sign Up",
-              //   press: () =>Navigator.push(context, MaterialPageRoute(builder: (context)=>Signin())),
-              // ),
               Spacer(flex: 2),
-              // RawMaterialButton(
-              //     onPressed: () {},
-              //     elevation: 2.0,
-              //     fillColor: Colors.white,
-              //     //textStyle: TextStyle('hii'),
-              //     child: Icon(
-              //       Icons.chat_rounded,
-              //       size: 35.0,
-              //       color: pPrimaryColor,
-              //     ),
-              //     padding: EdgeInsets.all(15.0),
-              //     shape: CircleBorder(),
-              //   ),
-              
               ],
             ),
           )
@@ -105,13 +77,11 @@ class PrimaryButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.press,
-    //this.color = pPrimaryColor,
     this.padding = const EdgeInsets.all(pDefaultPadding * 0.75),
   }) : super(key: key);
 
   final String text;
   final VoidCallback press;
-  //final color;
   final EdgeInsets padding;
 
   @override
