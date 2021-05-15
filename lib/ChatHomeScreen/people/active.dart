@@ -1,8 +1,8 @@
 import 'dart:math';
-import 'package:chat_page/ChatHomeScreen/stories.dart';
 import 'package:chat_page/models/chat_model.dart';
 import 'package:flutter/material.dart';
-import '../AppColorCodes.dart';
+import '../../AppColorCodes.dart';
+import 'buttons.dart';
 
 class People extends StatefulWidget {
   const People({Key? key}) : super(key: key);
@@ -45,82 +45,10 @@ class _PeopleState extends State<People> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(
-            left: 32.0, right: 32.0, top: 8.0, bottom: 8.0),
+            left: 10.0, right: 10.0, top: 8.0, bottom: 8.0),
         child: Column(
           children: [
-            Row(
-              children: [
-                MaterialButton(
-                  onPressed: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => People(),
-                      ),
-                    );},
-                  minWidth: MediaQuery.of(context).size.width * 0.4,
-                  height: 45,
-                  shape: isDark
-                      ? RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: BorderSide(color: Colors.white),
-                        )
-                      : RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: BorderSide(
-                            color: Colors.black,
-                          ),
-                        ),
-                  elevation: 0,
-                  color: pPrimaryColor.withOpacity(0.8),
-                  //color: Colors.grey[500],
-                  child: Text(
-                    "ACTIVE(105)",
-                    style: TextStyle(
-                      color: Theme.of(context).textTheme.bodyText1!.color,
-                      //color: pPrimaryColor,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-                Spacer(
-                  flex: 1,
-                ),
-                MaterialButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Stories(),
-                      ),
-                    );
-                  },
-                  height: 45,
-                  minWidth: MediaQuery.of(context).size.width * 0.4,
-                  shape: isDark
-                      ? RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: BorderSide(color: Colors.white),
-                        )
-                      : RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          side: BorderSide(
-                            color: Colors.black,
-                          ),
-                        ),
-                  elevation: 0,
-                  color: pSecondaryColor.withOpacity(0.9),
-                  child: Text(
-                    "STORIES(50)",
-                    style: TextStyle(
-                      color: Theme.of(context).textTheme.bodyText1!.color,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            ButtonsActiveStory(isDark: isDark),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(top: 24.0),
