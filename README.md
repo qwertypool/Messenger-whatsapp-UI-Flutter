@@ -2,6 +2,7 @@
 
 # Chat-App UI
 
+## If you liked it, please give it a star .
 ***
 
 > #### Features of the app - 
@@ -18,7 +19,7 @@
 
 <h3 align="center" style="color:green" ></h3>
  <p align="center">
-<img src="https://user-images.githubusercontent.com/36128196/118398102-c2776c00-b674-11eb-9ce3-3ffe0488c888.png" width="500"></img>
+<img src="https://user-images.githubusercontent.com/36128196/118398102-c2776c00-b674-11eb-9ce3-3ffe0488c888.png" width="400"></img>
 </p>
 <br>
 ---
@@ -105,7 +106,7 @@
 ***
 
 
-## *If you liked it, please give a star and also fork the repo, Thank you happy coding :)*
+
 
 ### To use this app follow below instructions-:
 
