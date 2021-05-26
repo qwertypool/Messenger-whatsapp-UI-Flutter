@@ -15,16 +15,6 @@
 
 
 ***
-
-
-<h3 align="center" style="color:green" ></h3>
- <p align="center">
-<img src="https://user-images.githubusercontent.com/36128196/118398102-c2776c00-b674-11eb-9ce3-3ffe0488c888.png" width="400"></img>
-</p>
-<br>
----
-
-
 ### Some Screenshots of this series
 
 <h3 align="center" style="color:green" >1. Welcome Page</h3>
