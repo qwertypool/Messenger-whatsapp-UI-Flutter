@@ -2,15 +2,12 @@
 
 # Chat-App UI
 
-## If you liked it, please give it a star .
-***
+#Only part of code available, for complete code ping here [![Gmail Badge](https://img.shields.io/badge/-deepapandey364-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:deepapandey364@gmail.com)](mailto:deepapandey364@gmail.com)
 
 > #### Features of the app - 
 > -  Light Mode + Dark Mode
 > -  4 different color themes - pink/teal/yellow/purple
 > -  Inspired from messenger + whatsapp
-> 
->  It is open source so feel free to contribute, star & fork the repo if you liked it!
 >  
 
 
