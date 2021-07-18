@@ -2,7 +2,7 @@
 
 # Chat-App UI
 
-#Only part of code available, for complete code ping here [![Gmail Badge](https://img.shields.io/badge/-deepapandey364-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:deepapandey364@gmail.com)](mailto:deepapandey364@gmail.com)
+# Only a PART of code available, for complete code ping here [![Gmail Badge](https://img.shields.io/badge/-deepapandey364-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:deepapandey364@gmail.com)](mailto:deepapandey364@gmail.com)
 
 > #### Features of the app - 
 > -  Light Mode + Dark Mode
@@ -91,20 +91,3 @@
 </p>
 
 ***
-
-
-
-
-### To use this app follow below instructions-:
-
-1. Clone this app using below syntax -:
-
-   > git clone https://github.com/DevStack06/Whatsapp-Clone-Flutter.git
-
-2. After cloning install packages using below syntax -:
-   > flutter pub get
-
-Above command will install all the neccery packges.
-
-3. Run the app on your mobile using below command -:
-   > flutter run
