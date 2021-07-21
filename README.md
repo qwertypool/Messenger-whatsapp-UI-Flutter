@@ -2,7 +2,7 @@
 
 # Chat-App UI
 
-# Only a PART of code available, for complete code ping here [![Gmail Badge](https://img.shields.io/badge/-deepapandey364-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:deepapandey364@gmail.com)](mailto:deepapandey364@gmail.com)
+# Only a PART of code available, for complete code ping here [![Instagram Badge](https://img.shields.io/badge/-flutter_girlz-black?style=flat-square&logo=instagram&logoColor=white&link=https://www.instagram.com/flutter_girlz_/)](https://www.instagram.com/flutter_girlz_/)
 
 > #### Features of the app - 
 > -  Light Mode + Dark Mode
